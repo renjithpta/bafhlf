@@ -1,0 +1,38 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: manufacturer-vaultkubenertes-job
+  namespace: manufacturer-net
+  annotations:
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: manufacturer-vaultkubenertes-job
+  chart:
+    git: https://github.com/renjithpta/blockchain-automation-framework.git
+    ref: local
+    path: platforms/hyperledger-fabric/charts/vault_kubernetes
+  values:
+    metadata:
+      name: manufacturer
+      component_name: manufacturer-net
+      component_type: peer
+      namespace: manufacturer-net    
+      images:
+        fabrictools: hyperledger/fabric-tools:2.2.2
+        alpineutils: index.docker.io/hyperledgerlabs/alpine-utils:1.0
+
+    checks:
+      vault_auth_status_exits: True
+      vault_policy_not_exits: False
+
+    vault:
+      role: vault-role
+      address: http://13.235.23.226:8200
+      authpath: localmanufacturer-net-auth
+      policy: vault-crypto-peer-manufacturer-net-ro
+      secret_path: secretsv2
+      serviceaccountname: vault-auth
+      imagesecretname: regcred
+    
+    k8s:
+      kubernetes_url: https://172.17.0.4:8443

@@ -1,0 +1,21 @@
+checks:
+    vault_auth_status_exits: true
+    vault_policy_not_exits: false
+k8s:
+    kubernetes_url: https://172.17.0.4:8443
+metadata:
+    component_name: carrier-net
+    component_type: peer
+    images:
+        alpineutils: index.docker.io/hyperledgerlabs/alpine-utils:1.0
+        fabrictools: hyperledger/fabric-tools:2.2.2
+    name: carrier
+    namespace: carrier-net
+vault:
+    address: http://13.235.23.226:8200
+    authpath: localcarrier-net-auth
+    imagesecretname: regcred
+    policy: vault-crypto-peer-carrier-net-ro
+    role: vault-role
+    secret_path: secretsv2
+    serviceaccountname: vault-auth

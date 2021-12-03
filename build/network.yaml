@@ -107,7 +107,7 @@ network:
         chart_source: "platforms/hyperledger-fabric/charts"                             # Relative Path where the Helm charts are stored in Git repo
         git_repo: "github.com/renjithpta/bafhlf.git"       # Gitops https URL for git push  (without https://)
         username: "renjithpta"                                                     # Git user who has rights to check-in in all branches
-        password: "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"                                                        # Git Server user password or token
+        password: "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"                                                        # Git Server user password or token
         email: "renjithkn@gmail.com"                                                           # Email to use in git config
         private_key: "/home/ubuntu/bafhlf/build/gitops"               # Path to private key file which has write-access to the git repo
      
@@ -178,7 +178,7 @@ network:
         chart_source: "platforms/hyperledger-fabric/charts"                             # Relative Path where the Helm charts are stored in Git repo
         git_repo: "github.com/renjithpta/bafhlf.git"       # Gitops https URL for git push  (without https://)
         username: "renjithpta"                                                     # Git user who has rights to check-in in all branches
-        password: "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"                                                        # Git Server user password or token
+        password: "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"                                                        # Git Server user password or token
         email: "renjithkn@gmail.com"                                                           # Email to use in git config
         private_key: "/home/ubuntu/bafhlf/build/gitops"             # Path to private key file which has write-access to the git repo
 
@@ -262,7 +262,7 @@ network:
         chart_source: "platforms/hyperledger-fabric/charts"                             # Relative Path where the Helm charts are stored in Git repo
         git_repo: "github.com/renjithpta/bafhlf.git"       # Gitops https URL for git push  (without https://)
         username: "renjithpta"                                                     # Git user who has rights to check-in in all branches
-        password: "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"                                                        # Git Server user password or token
+        password: "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"                                                        # Git Server user password or token
         email: "renjithkn@gmail.com"                                                           # Email to use in git config
         private_key: "/home/ubuntu/bafhlf/build/gitops"              # Path to private key file which has write-access to the git repo
 
@@ -298,7 +298,7 @@ network:
             maindirectory: "cmd"   # The main directory where chaincode is needed to be placed
             repository:
               username: "renjithpta"          # Git user
-              password: "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"            # Git token or password of above user
+              password: "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"            # Git token or password of above user
               url: "https://github.com/renjithpta/bafhlf.git"
               branch: local
               path: "examples/supplychain-app/fabric/chaincode_rest_server/chaincode/"  #The path to the chaincode in the repo

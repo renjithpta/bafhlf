@@ -8,7 +8,7 @@ metadata:
 spec:
   releaseName: supplychain-ca-server-job
   chart:
-    git: https://github.com/renjithpta/blockchain-automation-framework.git
+    git: https://github.com/renjithpta/bafhlf.git
     ref: local
     path: platforms/hyperledger-fabric/charts/ca_server
   values:

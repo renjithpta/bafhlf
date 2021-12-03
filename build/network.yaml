@@ -29,7 +29,7 @@ network:
       name: orderer1
       org_name: supplychain                 # org_name should match one organization definition below in organizations: key            
       uri: orderer1.supplychain-net:7050    # Internal URI for orderer which should be reachable by all peers
-      certificate: /home/ubuntu/blockchain-automation-framework/build/orderer1.crt   # the directory should be writable
+      certificate: /home/ubuntu/bafhlf/build/orderer1.crt   # the directory should be writable
   
   # The channels defined for a network with participating peers in each channel
   channels:
@@ -88,7 +88,7 @@ network:
       k8s:
         region: "cluster_region"
         context: "minikube"
-        config_file: "/home/ubuntu/blockchain-automation-framework/build/config"
+        config_file: "/home/ubuntu/bafhlf/build/config"
 
       # Hashicorp Vault server address and root-token. Vault should be unsealed.
       # Do not check-in root_token
@@ -101,15 +101,15 @@ network:
       # Do not check-in git_access_token
       gitops:
         git_protocol: "https" # Option for git over https or ssh
-        git_url: "https://github.com/renjithpta/blockchain-automation-framework.git"  
+        git_url: "https://github.com/renjithpta/bafhlf.git"  
         branch: "local"                                                                 # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev"                        # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"                             # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/renjithpta/blockchain-automation-framework.git"       # Gitops https URL for git push  (without https://)
+        git_repo: "github.com/renjithpta/bafhlf.git"       # Gitops https URL for git push  (without https://)
         username: "renjithpta"                                                     # Git user who has rights to check-in in all branches
         password: "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"                                                        # Git Server user password or token
         email: "renjithkn@gmail.com"                                                           # Email to use in git config
-        private_key: "/home/ubuntu/blockchain-automation-framework/build/gitops"               # Path to private key file which has write-access to the git repo
+        private_key: "/home/ubuntu/bafhlf/build/gitops"               # Path to private key file which has write-access to the git repo
      
       # Services maps to the pods that will be deployed on the k8s cluster
       # This sample is an orderer service and includes a zk-kafka consensus
@@ -159,7 +159,7 @@ network:
       k8s:
         region: "cluster_region"
         context: "minikube"
-        config_file: "/home/ubuntu/blockchain-automation-framework/build/config"
+        config_file: "/home/ubuntu/bafhlf/build/config"
 
       # Hashicorp Vault server address and root-token. Vault should be unsealed.
       # Do not check-in root_token
@@ -172,15 +172,15 @@ network:
       # Do not check-in git_access_token
       gitops:
         git_protocol: "https" # Option for git over https or ssh
-        git_url: "https://github.com/renjithpta/blockchain-automation-framework.git"  
+        git_url: "https://github.com/renjithpta/bafhlf.git"  
         branch: "local"                                                                 # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev"                        # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"                             # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/renjithpta/blockchain-automation-framework.git"       # Gitops https URL for git push  (without https://)
+        git_repo: "github.com/renjithpta/bafhlf.git"       # Gitops https URL for git push  (without https://)
         username: "renjithpta"                                                     # Git user who has rights to check-in in all branches
         password: "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"                                                        # Git Server user password or token
         email: "renjithkn@gmail.com"                                                           # Email to use in git config
-        private_key: "/home/ubuntu/blockchain-automation-framework/build/gitops"             # Path to private key file which has write-access to the git repo
+        private_key: "/home/ubuntu/bafhlf/build/gitops"             # Path to private key file which has write-access to the git repo
 
       # The participating nodes are peers
       # This organization hosts it's own CA server
@@ -217,7 +217,7 @@ network:
             repository:
               username: "github_username"          # Git user
               password: "github_token"             # Git token or password of above user
-              url: "github.com/<username>/blockchain-automation-framework.git"
+              url: "github.com/<username>/bafhlf.git"
               branch: develop
               path: "examples/supplychain-app/fabric/chaincode_rest_server/chaincode/"  #The path to the chaincode in the repo
             arguments: '\"init\",\"\"'                                                  #Arguments to be passed along with the chaincode parameters
@@ -243,7 +243,7 @@ network:
       k8s:
         region: "cluster_region"
         context: "minikube"
-        config_file: "/home/ubuntu/blockchain-automation-framework/build/config"
+        config_file: "/home/ubuntu/bafhlf/build/config"
 
       # Hashicorp Vault server address and root-token. Vault should be unsealed.
       # Do not check-in root_token
@@ -256,15 +256,15 @@ network:
       # Do not check-in git_access_token
       gitops:
         git_protocol: "https" # Option for git over https or ssh
-        git_url: "https://github.com/renjithpta/blockchain-automation-framework.git"  
+        git_url: "https://github.com/renjithpta/bafhlf.git"  
         branch: "local"                                                                 # Git branch where release is being made
         release_dir: "platforms/hyperledger-fabric/releases/dev"                        # Relative Path in the Git repo for flux sync per environment. 
         chart_source: "platforms/hyperledger-fabric/charts"                             # Relative Path where the Helm charts are stored in Git repo
-        git_repo: "github.com/renjithpta/blockchain-automation-framework.git"       # Gitops https URL for git push  (without https://)
+        git_repo: "github.com/renjithpta/bafhlf.git"       # Gitops https URL for git push  (without https://)
         username: "renjithpta"                                                     # Git user who has rights to check-in in all branches
         password: "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"                                                        # Git Server user password or token
         email: "renjithkn@gmail.com"                                                           # Email to use in git config
-        private_key: "/home/ubuntu/blockchain-automation-framework/build/gitops"              # Path to private key file which has write-access to the git repo
+        private_key: "/home/ubuntu/bafhlf/build/gitops"              # Path to private key file which has write-access to the git repo
 
       services:
         ca:
@@ -299,7 +299,7 @@ network:
             repository:
               username: "renjithpta"          # Git user
               password: "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"            # Git token or password of above user
-              url: "https://github.com/renjithpta/blockchain-automation-framework.git"
+              url: "https://github.com/renjithpta/bafhlf.git"
               branch: local
               path: "examples/supplychain-app/fabric/chaincode_rest_server/chaincode/"  #The path to the chaincode in the repo
             arguments: '\"init\",\"\"'                                                  #Arguments to be passed along with the chaincode parameters
